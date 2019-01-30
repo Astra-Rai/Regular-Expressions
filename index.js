@@ -1,18 +1,20 @@
-//Regular Expressions
+//Regular Expressions - Match Literal Strings
 //Regular Expressions are use in programming languages to match parts of strings
-let sentence = "The dog chased the cat."
-//we want to know if the world the is in the sentence variable
-//put word you want to search in between two foward slashes
-//notice there are no quotes around the word
-let regex = /the/
 
+//Where is Waldo?
 
-let myString = "Hello, World!";
-let myRegex = /Hello/;
+let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
 
-//use the test method, applies it to a string and return true if there is an exact patter math
-//we're going to test if the Regex, /Hello/is in the variable myString and store that information in the variable result
-let result = myRegex.test(myString); 
+//here we want to find the word Waldo, this is case sensitive
+let waldoRegex = /Waldo/;
 
-//console log variable result, will return true if there is a pattern match
+/*test method is used to find the string Waldo
+within the variable that contains the string
+"Somewhere Waldo is hiding in this text"
+*/
+
+let result = waldoRegex.test(waldoIsHiding);
+
+//should return true
+//would return false if the 'w' in waldo was lower case
 console.log(result);
